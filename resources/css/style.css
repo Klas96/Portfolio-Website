@@ -3,7 +3,7 @@
 font-family: 'Heebo', sans-serif; */
 :root {
   --primaryColor: #fffb00;
-  --primaryDarkColor: #3D0048;
+  --primaryDarkColor: #372958;
   --primaryHoverColor: #ffe600;
   --secondaryColor: #F9B000;
   --baseColor: #ddd8c7;
@@ -74,8 +74,8 @@ a, .btn {
   color: var(--bs-white);
 }
 .btnOutline {
-	border: 1px solid var(--primaryDarkColor);
-	color: var(--primaryDarkColor);
+	border: 1px solid var(--primaryColor);
+	color: var(--primaryColor);
 }
 .btnOutline:hover {
 	border: 1px solid var(--primaryDarkColor);
@@ -216,7 +216,7 @@ a, .btn {
   -o-transition: background-color 500ms ease-in-out 250ms;
   transition: background-color 500ms ease-in-out 250ms;
 	background-color: #000;
-	border: 1px solid rgba(0,0,0,0.2);
+	border: 1px solid rgba(110, 106, 106, 0.2);
   margin-left: auto;
 }
 .navToggle:hover {
