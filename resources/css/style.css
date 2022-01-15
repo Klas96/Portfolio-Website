@@ -714,6 +714,7 @@ body.navToggleActive {
   }
   .testimonialSlider .swiper-slide {
   	padding: 0 0px 50px;
+    background-color: black;
   }
   .swiperBtnStyle.swiper-button-next {
   	right: auto;
@@ -762,7 +763,7 @@ body.navToggleActive {
 input[type=text], input[type=email], select, textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(12, 11, 11);
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
