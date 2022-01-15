@@ -342,7 +342,7 @@ a, .btn {
 }
 .cardStyle1 {
 	padding: 25px;
-	background-color: var(--bs-white);
+	background-color: black);
 	border-radius: 4px;
   height: 100%;
 }
@@ -737,6 +737,7 @@ body.navToggleActive {
   	padding: 40px 0;
   }
   .cardStyle1 {
+    background-color: #353535;
   	padding: 15px;
   }
   .btn {
