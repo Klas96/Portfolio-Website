@@ -129,9 +129,6 @@ a, .btn {
 .bold {
   font-weight: var(--bold);
 }
-.black {
-  font-weight: var(--black);
-}
 
 
 .headerCol {
@@ -159,7 +156,7 @@ a, .btn {
 }
 .navCol a {
 	font-size: 20px;
-	color: #000;
+	color: rgb(185, 174, 174);
   font-weight: var(--medium);
   display: inline-block;
   position: relative;
@@ -215,7 +212,7 @@ a, .btn {
 	-webkit-transition: background-color 500ms ease-in-out 250ms;
   -o-transition: background-color 500ms ease-in-out 250ms;
   transition: background-color 500ms ease-in-out 250ms;
-	background-color: #000;
+	background-color: rgb(22, 20, 20);
 	border: 1px solid rgba(110, 106, 106, 0.2);
   margin-left: auto;
 }
@@ -256,7 +253,6 @@ a, .btn {
   -ms-transform: translateY(-6px) rotate(225deg);
   transform: translateY(-6px) rotate(225deg);
 }
-/*   /nav toggle */
 
 
 /* banner section */
@@ -360,7 +356,7 @@ a, .btn {
 .dateLbl {
 	display: inline-block;
 	padding: 4px 12px;
-	background-color: #142850;
+	background-color: #211450;
 	border-radius: 20px;
 	color: rgb(168, 60, 60);
 	font-size: 18px;
@@ -622,6 +618,7 @@ body.navToggleActive {
     -webkit-transition: all 300ms ease-in-out 0s;
     -o-transition: all 300ms ease-in-out 0s;
     transition: all 300ms ease-in-out 0s;
+    text-decoration-color: #a19f99;
   }
   .navToggleActive .navCollapseCol {
     -webkit-transform: translateX(0);
