@@ -21,7 +21,8 @@ from django.views.generic.base import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html', projects = [1,12,34])),
+    path('', )
+    path('', TemplateView.as_view(template_name='index.html')),
     #path('portfolio/',),
     #path('contact/,'),
 ]
