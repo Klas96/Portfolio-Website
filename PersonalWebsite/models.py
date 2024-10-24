@@ -8,6 +8,10 @@ class Certificate(models.Model):
     href = models.URLField()
     description = models.TextField()
 
+    def save(self, *args, **kwargs):
+        print(f'Saving Certificate: {self.title}')
+        super().save(*args, **kwargs)
+
 class Testimonial(models.Model):
     author = models.CharField(max_length=255)
     quote = models.TextField()

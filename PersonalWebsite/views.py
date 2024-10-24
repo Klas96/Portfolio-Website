@@ -1,13 +1,12 @@
 from django.shortcuts import render
+from pathlib import Path
 
 # Create your views here.
 from data_depricate import certificates, testamonials, personal_description
-from jinja2 import Environment, FileSystemLoader
 from data.art import art_projects
-from data.book_reviews import book_reviews
 from data.time_line_enteries import time_line
-from data.programing import code_projects, skills 
-
+from data.programing import skills 
+from PersonalWebsite.models import CodeProject
 
 header_links = [
     {"name": "Home",
@@ -27,13 +26,12 @@ header_links = [
 data_dict = {
     'header_links': header_links,
     'testimonials': testamonials,
-    'code_projects': code_projects,
+    'code_projects': CodeProject.objects.all(),
     'art_projects': art_projects,
     'certificates': certificates,
     'skills': skills,
     "time_line": time_line,
     "personal_description": personal_description,
-    "book_reviews": book_reviews
 }
 
 def render_portfolio(language):
@@ -85,3 +83,15 @@ if __name__ == '__main__':
     render_portfolio("en")
     render_portfolio("sv")
 
+def index(request):
+    print(data_dict['code_projects'])
+    return render(request, 'index.html', data_dict)
+
+def code_portfolio(request):
+    return render(request, 'code_portfolio.html', data_dict)
+
+def art_portfolio(request):
+    return render(request, 'art_portfolio.html', data_dict)
+
+def timeline(request):
+    return render(request, 'timeline.html', data_dict)

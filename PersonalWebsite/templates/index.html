@@ -134,7 +134,7 @@
                 <a href="code_portfolio.html" class="simpleLink">View all</a>
               </div>
             </div>
-            {% for project in code_projects[:3] %}
+            {% for project in code_projects|slice:":3" %}
                 <div class="portfolioCard">
                   <div class="row g-4 align-items-center">
                     <div class="col-md-auto">
@@ -148,10 +148,11 @@
                         <ul class="portfolioOption">
                           <li><span class="dateLbl">{{project.year}}</span></li>
                           <li>
-                          {% for skill in project.skills[:-1] %}
-                            {{skill}},
-                          {% endfor %}
-                          {{project.skills[-1]}}
+                            {% for skill in project.skills.all %}
+                              {% if not forloop.last %}
+                                {{ skill }},
+                              {% endif %}
+                            {% endfor %}
                           </li>
                         </ul>
                         <p>{{project.description}}</p>
@@ -173,7 +174,7 @@
                 <a href="art_portfolio.html" class="simpleLink">View all</a>
               </div>
             </div>
-            {% for project in art_projects[:3] %}
+            {% for project in art_projects|slice:":3" %}
                 <div class="portfolioCard">
                   <div class="row g-4 align-items-center">
                     <div class="col-md-auto">
