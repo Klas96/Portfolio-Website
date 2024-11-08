@@ -1,12 +1,7 @@
 from django.shortcuts import render
 from pathlib import Path
+from PersonalWebsite.models import CodeProject, ArtProject, Certificate, Testimonial, Skill, TimelineEntry
 
-# Create your views here.
-from data_depricate import certificates, testamonials, personal_description
-from data.art import art_projects
-from data.time_line_enteries import time_line
-from data.programing import skills 
-from PersonalWebsite.models import CodeProject
 
 header_links = [
     {"name": "Home",
@@ -21,13 +16,13 @@ header_links = [
 
 data_dict = {
     'header_links': header_links,
-    'testimonials': testamonials,
+    'testimonials': Testimonial.objects.all(),
     'code_projects': CodeProject.objects.all(),
-    'art_projects': art_projects,
-    'certificates': certificates,
-    'skills': skills,
-    "time_line": time_line,
-    "personal_description": personal_description,
+    'art_projects': ArtProject.objects.all(),
+    'certificates': Certificate.objects.all(),
+    'skills': Skill.objects.all(),
+    "time_line": TimelineEntry.objects.all(),
+    "personal_description": "TODO: Add personal description",
 }
 
 def render_portfolio(language):

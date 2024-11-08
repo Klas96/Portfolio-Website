@@ -55,7 +55,7 @@ ROOT_URLCONF = 'WebApp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'PersonalWebsite/templates'],  # Add your templates directory here
+        'DIRS': [BASE_DIR / 'PersonalWebsite/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

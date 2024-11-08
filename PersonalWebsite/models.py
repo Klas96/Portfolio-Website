@@ -15,7 +15,7 @@ class Certificate(models.Model):
 class Testimonial(models.Model):
     author = models.CharField(max_length=255)
     quote = models.TextField()
-    image = models.ImageField(upload_to='testimonials/')
+    image = models.ImageField(upload_to='static/images/testimonials/')
 
 class PersonalDescription(models.Model):
     title = models.CharField(max_length=255)
@@ -29,7 +29,7 @@ class CodeProject(models.Model):
     title = models.CharField(max_length=255)
     year = models.IntegerField()
     description = models.TextField()
-    image = models.ImageField(upload_to='code_projects/')
+    image = models.ImageField(upload_to='static/images/code_projects/')
     href = models.URLField()
     skills = models.ManyToManyField(Skill)
 
@@ -39,3 +39,9 @@ class TimelineEntry(models.Model):
     location = models.CharField(max_length=255)
     time_span = models.CharField(max_length=255)
     description_points = models.TextField()
+
+class ArtProject(models.Model):
+    title = models.CharField(max_length=255)
+    url = models.CharField(max_length=255)
+    description = models.TextField()
+    image = models.ImageField(upload_to='static/images/art_projects/')

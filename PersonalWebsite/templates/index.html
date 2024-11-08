@@ -19,11 +19,6 @@
                     <div class="col-auto">
                       <a download href="/static/CV/KlasHolmgrenCV.pdf" class="btn btnPrimary">Download Resume</a>
                     </div>
-                    <!--
-                    <div class="col-auto">
-                      <a href="contact.html" class="btn btnOutline">Contact</a>
-                    </div>
-                    -->
                   </div>
                 </div>
               </div>
@@ -33,57 +28,6 @@
       </div>
     </section>
 
-
-    <!--
-    <section>
-      <div class="sectionSpace pt-0">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-auto">
-              <div class="keySkillRow">
-                <h4 class="pb-3">Personal Traites</h4>
-                <div class="keySkillCard">
-                  <div class="ksIconCol">
-                    <i class="fa fa-4x fa-handshake-o" aria-hidden="true"></i>
-                  </div>
-                  <span class="ksText">Inclusive</span>
-                </div>
-                <div class="keySkillCard">
-                  <div class="ksIconCol">
-                    <i class="fa fa-4x fa-crosshairs" aria-hidden="true"></i>
-                  </div>
-                  <span class="ksText">Goal Oriented</span>
-                </div>
-                <div class="keySkillCard">
-                  <div class="ksIconCol">
-                    <i class="fa fa-4x fa-connectdevelop" aria-hidden="true"></i>
-                  </div>
-                  <span class="ksText">Analytical</span>
-                </div>
-                <div class="keySkillCard">
-                  <div class="ksIconCol">
-                    <i class="fa fa-4x fa-comments" aria-hidden="true"></i>
-                  </div>
-                  <span class="ksText">Honest</span>
-                </div>
-                <div class="keySkillCard">
-                  <div class="ksIconCol">
-                    <i class="fa fa-4x fa-heart" aria-hidden="true"></i>
-                  </div>
-                  <span class="ksText">Kind</span>
-                </div>
-                <div class="keySkillCard">
-                  <div class="ksIconCol">
-                    <i class="fa fa-4x fa-thumbs-up" aria-hidden="true"></i>
-                  </div>
-                  <span class="ksText">Supportive</span>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    -->
     <section>
       <div class="sectionSpaceSm lightBg">
         <div class="container">
@@ -126,7 +70,7 @@
                 <h4 class="lgTitle regular">Code Programs</h4>
               </div>
               <div class="col-auto">
-                <a href="code_page.html" class="simpleLink">View all</a>
+                <a href="{% url 'code_page' %}" class="simpleLink">View all</a>
               </div>
             </div>
             {% for project in code_projects|slice:":3" %}
@@ -134,7 +78,7 @@
                   <div class="row g-4 align-items-center">
                     <div class="col-md-auto">
                       <div class="portfolioImgCol">
-                        <a href="{{project.href}}"><img src="resources/images/portfolio/{{project.image}}" alt="{{project.titel}}"></a>
+                        <a href="{{project.href}}"><img src="{% static 'images/portfolio/' %}{{project.image}}" alt="{{project.titel}}"></a>
                       </div>
                     </div>
                     <div class="col-md">
@@ -158,11 +102,9 @@
             {% endfor %}
           </div>
 
-          <!-- TODO Space-->
           <div class="portfolioCol">
             <div class="row pb-3">
               <div class="col">
-                <!--TODO Aligne left-->
                 <h4 class="lgTitle regular">Artworks</h4>
               </div>
               <div class="col-auto">
@@ -174,7 +116,7 @@
                   <div class="row g-4 align-items-center">
                     <div class="col-md-auto">
                       <div class="portfolioImgCol">
-                        <img src="resources/images/art/{{project.url}}" alt="{{project.titel}}">
+                        <img src="{% static 'images/art/' %}{{project.url}}" alt="{{project.titel}}">
                       </div>
                     </div>
                     <div class="col-md">
@@ -206,7 +148,7 @@
                       <div class="row align-items-center">
                         <div class="col-sm-auto">
                           <div class="tImgCol">
-                            <img src="resources/images/{{testimonial.image}}" alt="Logo">
+                            <img src="{% static 'images/' %}{{testimonial.image}}" alt="Logo">
                           </div>
                         </div>
                         <div class="col-sm">
@@ -229,26 +171,4 @@
       </div>
     </section>
     
-    <script>
-
-      /* 
-      {% for skill in skills %}
-        document.getElementById("{{skill.title}}").style.width = "{{skill.procentige}}%"
-        document.getElementById("pro{{skill.title}}").style.opacity = "1"
-      {% endfor %}
-
-      function anim_stat() {
-        $({countNum: 0}).animate({countNum: $('#counter').text()}, {
-          duration: 5000,
-          easing:'linear',
-          step: function() {
-            $('#counter').text(Math.floor(this.countNum));
-          },
-          complete: function() {
-            $('#counter').text(this.countNum);
-          }
-        });
-      }
-      */
-    </script>
 {% endblock %}
