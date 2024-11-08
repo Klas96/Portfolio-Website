@@ -42,6 +42,6 @@ class TimelineEntry(models.Model):
 
 class ArtProject(models.Model):
     title = models.CharField(max_length=255)
-    url = models.CharField(max_length=255)
     description = models.TextField()
     image = models.ImageField(upload_to='static/images/art_projects/')
+    year = models.IntegerField()

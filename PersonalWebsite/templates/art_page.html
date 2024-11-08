@@ -29,8 +29,8 @@
                       <time class="dateLbl">{{art_project.year}}</time>
                     </span>
                   </h5>
-                  <a onclick="enlargeImage('resources/images/art/{{art_project.url}}')">
-                    <img src="resources/images/art/{{art_project.url}}" alt="{{art_project.title}}"< class="pImg">
+                  <a onclick="enlargeImage('{{art_project.image.url}}')">
+                    <img src="{{art_project.image.url}}" alt="{{art_project.title}}" class="pImg">
                   </a>
                   <p>{{art_project.description}}</p>
                 </div>
