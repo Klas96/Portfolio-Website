@@ -10,17 +10,13 @@ from PersonalWebsite.models import CodeProject
 
 header_links = [
     {"name": "Home",
-     "url": "index.html"},
+     "url": "/"},
     {"name": "Code",
-     "url": "code_portfolio.html"},
+     "url": "/code"},
     {"name": "Art",
-     "url": "art_portfolio.html"},
+     "url": "/art"},
     {"name": "Timeline",
-     "url": "timeline.html"},
-    #{"name": "Contact",
-    # "url": "contact.html"}
-    #'book_reviews.html',
-    #'About_me.html',
+     "url": "/timeline"}
      ]
 
 data_dict = {
@@ -87,11 +83,11 @@ def index(request):
     print(data_dict['code_projects'])
     return render(request, 'index.html', data_dict)
 
-def code_portfolio(request):
-    return render(request, 'code_portfolio.html', data_dict)
+def code_page(request):
+    return render(request, 'code_page.html', data_dict)
 
-def art_portfolio(request):
-    return render(request, 'art_portfolio.html', data_dict)
+def art_page(request):
+    return render(request, 'art_page.html', data_dict)
 
 def timeline(request):
     return render(request, 'timeline.html', data_dict)
