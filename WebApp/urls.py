@@ -16,16 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from PersonalWebsite.views import index, code_page, art_page, timeline
-
-print("Loading URLs...")  # Debugging statement
+from PersonalWebsite.views import index, code_page, art_page, timeline, text_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index'),  # Home page
-    path('code/', code_page, name='code_page'),  # Code portfolio page
-    path('art/', art_page, name='art_page'),  # Art portfolio page
-    path('timeline/', timeline, name='timeline'),  # Timeline page
+    path('', index, name='index'),
+    path('code/', code_page, name='code_page'),
+    path('art/', art_page, name='art_page'),
+    path('text/', text_page, name='text_page'),
+    path('timeline/', timeline, name='timeline'),
 ]
 
 print("URLs loaded.")  # Debugging statement

@@ -7,9 +7,7 @@
           <div class="row g-4 g-md-3  align-items-center">
             <div class="col-md-6">
               <div class="bannerContent">
-                <h1 class="pb-md-3 xlTitle">See my art  below</h1>
-                <p>The art is made to relax and to give form to my fealings and thoughts. The medium for the art differ quite broadly, from oil-paintings, simple sketches and digital art.</p>
-                <p>The images can be enlarged by clicking them.</p>
+                <h1 class="pb-md-3 xlTitle">Art</h1>
               </div>
             </div>
           </div>
@@ -24,15 +22,9 @@
               {% for art_project in art_projects %}
               <div class="col-md-6 pColMain">
                 <div class="pCol">
-                  <h5><span>{{art_project.title}}</span>
-                    <span>
-                      <time class="dateLbl">{{art_project.year}}</time>
-                    </span>
-                  </h5>
                   <a onclick="enlargeImage('{{art_project.image.url}}')">
                     <img src="{{art_project.image.url}}" alt="{{art_project.title}}" class="pImg">
                   </a>
-                  <p>{{art_project.description}}</p>
                 </div>
               </div>
               <img class="navToggle__text" src="resources/images/art/{{art_project.url}}" alt="Toggle Image">

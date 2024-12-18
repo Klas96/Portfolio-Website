@@ -1,0 +1,24 @@
+{% extends "head_foot.html" %}
+<!---->
+{% block content %}
+  <section>
+    <ul class="timeline">
+      {% for time_item in time_line %}
+      <li>
+        <details>
+          <summary>
+            <h2>{{time_item.title}} </h2>
+            <h3><time datetime="{{time_item.time_span}}">{{time_item.time_span[0]}} - {{time_item.time_span[1]}}</time></h3>
+            <h3>{{time_item.organization}}</h3>
+          </summary>
+          <ul>
+            {% for description_point in time_item.description_points %}
+              <li>{{description_point}}</li>
+            {% endfor %}
+          </ul>
+        </details>
+      </li>
+      {% endfor %}
+    </ul>
+  </script>
+{% endblock %}

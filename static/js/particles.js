@@ -73,7 +73,7 @@ var pJS = function(tag_id, params){
       },
       move: {
         enable: true,
-        speed: 2,
+        speed: 0.1,
         direction: 'none',
         random: false,
         straight: false,
@@ -450,9 +450,12 @@ var pJS = function(tag_id, params){
 
       /* move the particle */
       if(pJS.particles.move.enable){
-        var ms = pJS.particles.move.speed/2;
-        p.x += p.vx * ms;
-        p.y += p.vy * ms;
+        var ms = pJS.particles.move.speed/200;
+        var angle = Math.atan2(p.vy, p.vx);
+        var ellipseRadiusX = 10; // Adjust the x-radius of the ellipse as needed
+        var ellipseRadiusY = 5;  // Adjust the y-radius of the ellipse as needed
+        p.x += ellipseRadiusX * Math.cos(angle) * ms;
+        p.y += ellipseRadiusY * Math.sin(angle) * ms;
       }
 
       /* change opacity status */

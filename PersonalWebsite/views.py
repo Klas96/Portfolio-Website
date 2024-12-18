@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from pathlib import Path
-from PersonalWebsite.models import CodeProject, ArtProject, Certificate, Testimonial, Skill, TimelineEntry
+from PersonalWebsite.models import CodeProject, ArtProject, Certificate, Testimonial, Skill, TimelineEntry, PersonalDescription
 
 
 header_links = [
@@ -10,8 +10,8 @@ header_links = [
      "url": "/code"},
     {"name": "Art",
      "url": "/art"},
-    {"name": "Timeline",
-     "url": "/timeline"}
+    {"name": "Text",
+     "url": "/text"}
      ]
 
 data_dict = {
@@ -21,8 +21,7 @@ data_dict = {
     'art_projects': ArtProject.objects.all(),
     'certificates': Certificate.objects.all(),
     'skills': Skill.objects.all(),
-    "time_line": TimelineEntry.objects.all(),
-    "personal_description": "TODO: Add personal description",
+    'personal_description': PersonalDescription.objects.last(),
 }
 
 def render_portfolio(language):
@@ -66,9 +65,6 @@ def render_portfolio(language):
             print(f"Rendered {templ}")
 
 
-
-
-
 if __name__ == '__main__':
     print("Rendering Web Pages...")
     render_portfolio("en")
@@ -86,3 +82,6 @@ def art_page(request):
 
 def timeline(request):
     return render(request, 'timeline.html', data_dict)
+
+def text_page(request):
+    return render(request, 'text_page.html', data_dict)
