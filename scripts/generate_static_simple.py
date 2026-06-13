@@ -315,14 +315,13 @@ def create_code_html():
             </div>
           </div>
           
-          <!-- YeastTrack Project -->
+          <!-- Bioinformatics Project -->
           <div class="col-md-6 pColMain">
             <div class="pCol" style="background-color: rgba(32, 32, 32, 0.5); padding: 20px; border-radius: 10px; border: 1px solid rgba(128, 128, 128, 0.7);">
-              <h3 style="color: white; margin-bottom: 15px;">YeastTrack</h3>
-              <p style="color: #ccc; margin-bottom: 15px;">Cell tracking and analysis software for biological research.</p>
+              <h3 style="color: white; margin-bottom: 15px;">Bioinformatics</h3>
+              <p style="color: #ccc; margin-bottom: 15px;">Bioinformatics projects, including <strong>YeastTrack</strong> - cell tracking and analysis software for biological research.</p>
               <div class="project-links">
-                <a href="cell-tracker.html" class="btn btn-warning btn-sm">View Details</a>
-                <a href="https://github.com/Klas96/YeastTrack" class="btn btn-primary btn-sm">GitHub</a>
+                <a href="bioinformatics.html" class="btn btn-warning btn-sm">Bioinformatics Details</a>
               </div>
             </div>
           </div>
